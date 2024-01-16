@@ -38,12 +38,12 @@ async function createDefine(root: string) {
 export default defineConfig(async ({ mode }: ConfigEnv) => {
   const root = process.cwd()
   const env = loadEnv(mode, root)
-  const { VITE_BASE, VITE_SERVER_PORT } = env
+  const { VITE_BASE_URL, VITE_SERVER_PORT } = env
 
   return {
     root,
 
-    base: VITE_BASE,
+    base: VITE_BASE_URL,
 
     resolve: {
       alias: {
